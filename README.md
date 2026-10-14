@@ -149,7 +149,7 @@ import express from 'express';
 24. **SERVER** - Initilaize a lowdb json database AND comment out the existing `defaultData` array
 ```
 const defaultData = { messages: [] };
-const adapter = new JSONFile('db.json');
+const adapter = await new JSONFile('db.json');
 const db = new Low(adapter, defaultData);
 ```
 25. **SERVER** - Write a new message to the database, not the messages array, in the `app.post` route
